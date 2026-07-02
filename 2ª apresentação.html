@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IA & Jogos Pedagógicos | Formação Docente</title>
+  <meta name="description" content="Apresentação interativa sobre integração de Inteligência Artificial no desenvolvimento de jogos pedagógicos para turmas com baixo engajamento." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Progress Bar -->
+<div id="progress-bar"><div id="progress-fill"></div></div>
+
+<!-- Slide Counter -->
+<div id="slide-counter"><span id="current-slide">1</span> / <span id="total-slides">10</span></div>
+
+<!-- Navigation -->
+<nav id="nav-dots"></nav>
+
+<!-- Navigation Arrows -->
+<button id="btn-prev" class="nav-arrow" onclick="changeSlide(-1)" aria-label="Slide anterior">&#8592;</button>
+<button id="btn-next" class="nav-arrow" onclick="changeSlide(1)" aria-label="Próximo slide">&#8594;</button>
+
+<!-- Keyboard hint -->
+<div id="key-hint">Use ← → ou clique nas setas para navegar</div>
+
+<!-- ===================== SLIDES ===================== -->
+<main id="slides-container">
+
+  <!-- SLIDE 1: CAPA -->
+  <section class="slide active" id="slide-1" data-slide="1">
+    <div class="slide-bg bg-hero"></div>
+    <div class="particles" id="particles-1"></div>
+    <div class="slide-content hero-content">
+      <div class="badge animate-in delay-1">Formação Docente 2026</div>
+      <h1 class="hero-title animate-in delay-2">
+        <span class="gradient-text">Inteligência Artificial</span><br/>
+        & Jogos Pedagógicos
+      </h1>
+      <p class="hero-subtitle animate-in delay-3">
+        Como usar LLMs e plataformas digitais para criar<br/>
+        experiências de aprendizagem que <strong>engajam alunos</strong><br/>
+        com baixa motivação
+      </p>
+      <div class="tools-row animate-in delay-4">
+        <div class="tool-chip chip-gemini">Gemini</div>
+        <div class="tool-chip chip-chatgpt">ChatGPT</div>
+        <div class="tool-chip chip-claude">Claude</div>
+        <div class="tool-chip chip-copilot">Copilot</div>
+        <div class="tool-chip chip-brisk">BriskTeaching</div>
+        <div class="tool-chip chip-magic">MagicSchool</div>
+      </div>
+      <div class="scroll-hint animate-in delay-5">
+        <div class="scroll-dot"></div>
+        <span>Navegar para começar</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 2: O DESAFIO -->
+  <section class="slide" id="slide-2" data-slide="2">
+    <div class="slide-bg bg-dark"></div>
+    <div class="slide-content centered-content">
+      <div class="section-tag animate-in delay-1">🎯 O Desafio Real</div>
+      <h2 class="slide-title animate-in delay-2">Conhecemos estas turmas?</h2>
+      <div class="challenge-grid animate-in delay-3">
+        <div class="challenge-card card-red">
+          <div class="challenge-icon">😴</div>
+          <h3>Pouco Empenho</h3>
+          <p>Alunos que raramente concluem tarefas ou participam ativamente nas aulas</p>
+        </div>
+        <div class="challenge-card card-orange">
+          <div class="challenge-icon">🔇</div>
+          <h3>Baixa Participação</h3>
+          <p>Silêncio persistente, resistência ao diálogo e à colaboração entre pares</p>
+        </div>
+        <div class="challenge-card card-yellow">
+          <div class="challenge-icon">📉</div>
+          <h3>Falta de Motivação</h3>
+          <p>Desinteresse pelo sucesso académico e ausência de objetivos escolares</p>
+        </div>
+      </div>
+      <div class="quote-box animate-in delay-4">
+        <p class="quote-text">"A pergunta não é <em>como ensinar mais</em>,<br/>mas como <strong>criar condições para que queiram aprender</strong>."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 3: POR QUE JOGOS? -->
+  <section class="slide" id="slide-3" data-slide="3">
+    <div class="slide-bg bg-purple"></div>
+    <div class="slide-content">
+      <div class="section-tag animate-in delay-1">🎮 Porquê Jogos?</div>
+      <h2 class="slide-title animate-in delay-2">A Neurociência do Jogo</h2>
+      <div class="two-col animate-in delay-3">
+        <div class="neuroscience-visual">
+          <div class="brain-card">
+            <div class="brain-icon">🧠</div>
+            <div class="brain-waves">
+              <div class="wave w1"></div>
+              <div class="wave w2"></div>
+              <div class="wave w3"></div>
+            </div>
+          </div>
+          <div class="neuro-facts">
+            <div class="fact-item">
+              <span class="fact-num">+60%</span>
+              <span class="fact-desc">mais retenção de informação com gamificação</span>
+            </div>
+            <div class="fact-item">
+              <span class="fact-num">3×</span>
+              <span class="fact-desc">maior probabilidade de completar tarefas</span>
+            </div>
+            <div class="fact-item">
+              <span class="fact-num">+40%</span>
+              <span class="fact-desc">melhoria no pensamento crítico</span>
+            </div>
+          </div>
+        </div>
+        <div class="pillars-col">
+          <h3 class="pillars-title">Os 4 Pilares do Engajamento</h3>
+          <div class="pillar-item">
+            <div class="pillar-dot dot-1"></div>
+            <div>
+              <strong>Autonomia</strong> — O aluno controla o ritmo e as escolhas
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-dot dot-2"></div>
+            <div>
+              <strong>Competência</strong> — Desafios ajustados ao nível real
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-dot dot-3"></div>
+            <div>
+              <strong>Pertença</strong> — Colaboração e identidade de grupo
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-dot dot-4"></div>
+            <div>
+              <strong>Propósito</strong> — Conexão com o mundo real
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 4: GRANDES MODELOS DE LINGUAGEM -->
+  <section class="slide" id="slide-4" data-slide="4">
+    <div class="slide-bg bg-dark"></div>
+    <div class="slide-content">
+      <div class="section-tag animate-in delay-1">🤖 Ferramentas de IA</div>
+      <h2 class="slide-title animate-in delay-2">Os Grandes Modelos de Linguagem (LLMs)</h2>
+      <p class="slide-desc animate-in delay-2">O que são e como nos podem ajudar em sala de aula?</p>
+      <div class="llm-grid animate-in delay-3">
+        <div class="llm-card">
+          <div class="llm-logo logo-gemini">G</div>
+          <h3>Gemini</h3>
+          <p>Google · Multimodal, integra com Google Workspace (Docs, Slides, Classroom)</p>
+          <div class="llm-tags"><span>Multimodal</span><span>Gratuito</span></div>
+        </div>
+        <div class="llm-card">
+          <div class="llm-logo logo-chatgpt">C</div>
+          <h3>ChatGPT</h3>
+          <p>OpenAI · Gerador versátil de texto, quiz, rubricas e materiais diferenciados</p>
+          <div class="llm-tags"><span>DALL-E</span><span>GPT-4o</span></div>
+        </div>
+        <div class="llm-card">
+          <div class="llm-logo logo-claude">A</div>
+          <h3>Claude</h3>
+          <p>Anthropic · Excelente para análise de texto longo e criação de narrativas pedagógicas</p>
+          <div class="llm-tags"><span>Seguro</span><span>Ético</span></div>
+        </div>
+        <div class="llm-card">
+          <div class="llm-logo logo-copilot">M</div>
+          <h3>Copilot</h3>
+          <p>Microsoft · Integrado no Office 365, Teams e ambiente escolar Microsoft</p>
+          <div class="llm-tags"><span>Office</span><span>Teams</span></div>
+        </div>
+      </div>
+      <div class="animate-in delay-4 llm-note">
+        💡 <strong>Todos são gratuitos</strong> na versão base — perfeitos para começar sem custos adicionais
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 5: PLATAFORMAS PEDAGÓGICAS -->
+  <section class="slide" id="slide-5" data-slide="5">
+    <div class="slide-bg bg-teal"></div>
+    <div class="slide-content">
+      <div class="section-tag animate-in delay-1">🛠️ Plataformas Especializadas</div>
+      <h2 class="slide-title animate-in delay-2">BriskTeaching & MagicSchool.ai</h2>
+      <div class="platforms-compare animate-in delay-3">
+        <div class="platform-card platform-brisk">
+          <div class="platform-header">
+            <div class="platform-logo brisk-logo">B</div>
+            <div>
+              <h3>BriskTeaching</h3>
+              <span class="platform-url">briskteaching.com</span>
+            </div>
+          </div>
+          <ul class="platform-features">
+            <li>🔌 Extensão Chrome que funciona dentro do Google Classroom</li>
+            <li>📝 Gera feedback automático nos trabalhos dos alunos</li>
+            <li>🎯 Cria rubricas, planos de aula e diferenciação automática</li>
+            <li>🎮 Converte conteúdos em atividades interativas e jogos</li>
+            <li>📊 Análise de dificuldades por turma em tempo real</li>
+          </ul>
+          <div class="platform-highlight">Ideal para integração Google Workspace</div>
+        </div>
+        <div class="platform-vs">VS</div>
+        <div class="platform-card platform-magic">
+          <div class="platform-header">
+            <div class="platform-logo magic-logo">M</div>
+            <div>
+              <h3>MagicSchool.ai</h3>
+              <span class="platform-url">magicschool.ai</span>
+            </div>
+          </div>
+          <ul class="platform-features">
+            <li>🪄 +60 ferramentas de IA numa única plataforma</li>
+            <li>🎲 Gerador de jogos, escape rooms e desafios gamificados</li>
+            <li>📖 Textos diferenciados por nível de leitura automático</li>
+            <li>📋 Quiz, fichas, planos de aula em minutos</li>
+            <li>🔒 Privacidade FERPA/COPPA — seguro para menores</li>
+          </ul>
+          <div class="platform-highlight">+3 milhões de professores no mundo</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 6: METODOLOGIA -->
+  <section class="slide" id="slide-6" data-slide="6">
+    <div class="slide-bg bg-dark"></div>
+    <div class="slide-content">
+      <div class="section-tag animate-in delay-1">🗺️ Metodologia</div>
+      <h2 class="slide-title animate-in delay-2">Como criar um Jogo Pedagógico com IA</h2>
+      <p class="slide-desc animate-in delay-2">Um processo em 5 etapas simples</p>
+      <div class="steps-flow animate-in delay-3">
+        <div class="step-item">
+          <div class="step-circle s1">1</div>
+          <div class="step-connector"></div>
+          <div class="step-content">
+            <h4>Definir Objetivo</h4>
+            <p>Que competência ou conteúdo quer trabalhar? (ex: frações, conjunção subordinada, fotossíntese)</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-circle s2">2</div>
+          <div class="step-connector"></div>
+          <div class="step-content">
+            <h4>Escolher o Formato</h4>
+            <p>Quiz, Escape Room digital, Missão colaborativa, Simulação, Storytelling interativo</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-circle s3">3</div>
+          <div class="step-connector"></div>
+          <div class="step-content">
+            <h4>Prompts para a IA</h4>
+            <p>Usar ChatGPT / Gemini / Claude para gerar o conteúdo do jogo com prompts específicos</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-circle s4">4</div>
+          <div class="step-connector"></div>
+          <div class="step-content">
+            <h4>Montar na Plataforma</h4>
+            <p>Importar para BriskTeaching ou MagicSchool — ou usar diretamente Genially, Wordwall, Kahoot</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-circle s5">5</div>
+          <div class="step-connector-hidden"></div>
+          <div class="step-content">
+            <h4>Avaliar & Iterar</h4>
+            <p>Observar o engajamento, recolher feedback dos alunos e melhorar a próxima versão</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 7: PROMPTS PRÁTICOS -->
+  <section class="slide" id="slide-7" data-slide="7">
+    <div class="slide-bg bg-indigo"></div>
+    <div class="slide-content">
+      <div class="section-tag animate-in delay-1">💬 Na Prática</div>
+      <h2 class="slide-title animate-in delay-2">Prompts que Funcionam</h2>
+      <p class="slide-desc animate-in delay-2">Copie, adapte e use amanhã de manhã</p>
+      <div class="prompts-grid animate-in delay-3">
+        <div class="prompt-card" onclick="togglePrompt(this)">
+          <div class="prompt-header">
+            <div class="prompt-icon">🎯</div>
+            <h4>Escape Room Digital</h4>
+            <span class="prompt-expand">▼</span>
+          </div>
+          <div class="prompt-body">
+            <div class="prompt-text">"Cria um escape room digital sobre [TEMA] para alunos do [X]º ano com dificuldades de motivação. Inclui 4 desafios progressivos com pistas, enigmas e uma narrativa envolvente. O tom deve ser de aventura/mistério. Cada desafio deve testar [COMPETÊNCIA]."</div>
+            <div class="prompt-tools">Usar em: <span>ChatGPT</span> <span>Claude</span> <span>MagicSchool</span></div>
+          </div>
+        </div>
+        <div class="prompt-card" onclick="togglePrompt(this)">
+          <div class="prompt-header">
+            <div class="prompt-icon">❓</div>
+            <h4>Quiz Adaptativo</h4>
+            <span class="prompt-expand">▼</span>
+          </div>
+          <div class="prompt-body">
+            <div class="prompt-text">"Cria um quiz de 10 perguntas sobre [TEMA] em 3 níveis de dificuldade (fácil, médio, difícil). Para cada pergunta errada, gera uma dica e uma explicação simples. Adapta a linguagem para alunos de [X]º ano com baixo nível de leitura."</div>
+            <div class="prompt-tools">Usar em: <span>Gemini</span> <span>Copilot</span> <span>BriskTeaching</span></div>
+          </div>
+        </div>
+        <div class="prompt-card" onclick="togglePrompt(this)">
+          <div class="prompt-header">
+            <div class="prompt-icon">🗺️</div>
+            <h4>Missão Colaborativa</h4>
+            <span class="prompt-expand">▼</span>
+          </div>
+          <div class="prompt-body">
+            <div class="prompt-text">"Cria uma missão colaborativa em grupo de 4 alunos sobre [TEMA]. Cada elemento tem um papel diferente (investigador, comunicador, decisor, criativo). A missão tem 3 fases e resulta num produto final apresentável à turma."</div>
+            <div class="prompt-tools">Usar em: <span>ChatGPT</span> <span>Gemini</span> <span>MagicSchool</span></div>
+          </div>
+        </div>
+        <div class="prompt-card" onclick="togglePrompt(this)">
+          <div class="prompt-header">
+            <div class="prompt-icon">📖</div>
+            <h4>Narrativa Interativa</h4>
+            <span class="prompt-expand">▼</span>
+          </div>
+          <div class="prompt-body">
+            <div class="prompt-text">"Cria uma história interativa sobre [TEMA] onde o aluno é o protagonista e toma decisões que afetam o resultado. Inclui 3 momentos de escolha com consequências diferentes. O conteúdo curricular deve emergir das situações da história."</div>
+            <div class="prompt-tools">Usar em: <span>Claude</span> <span>ChatGPT</span> <span>Genially</span></div>
+          </div>
+        </div>
+      </div>
+      <p class="click-hint animate-in delay-4">👆 Clique em cada card para ver o prompt completo</p>
+    </div>
+  </section>
+
+  <!-- SLIDE 8: FERRAMENTAS COMPLEMENTARES -->
+  <section class="slide" id="slide-8" data-slide="8">
+    <div class="slide-bg bg-dark"></div>
+    <div class="slide-content">
+      <div class="section-tag animate-in delay-1">🔧 Ecossistema Digital</div>
+      <h2 class="slide-title animate-in delay-2">Ferramentas para Implementar os Jogos</h2>
+      <div class="ecosystem-grid animate-in delay-3">
+        <div class="eco-category">
+          <h3 class="eco-cat-title">🎮 Criação de Jogos</h3>
+          <div class="eco-tools">
+            <div class="eco-tool">
+              <div class="eco-dot dot-green"></div>
+              <div>
+                <strong>Kahoot!</strong>
+                <span>Quiz competitivo em tempo real</span>
+              </div>
+            </div>
+            <div class="eco-tool">
+              <div class="eco-dot dot-green"></div>
+              <div>
+                <strong>Wordwall</strong>
+                <span>+30 tipos de jogos interativos</span>
+              </div>
+            </div>
+            <div class="eco-tool">
+              <div class="eco-dot dot-green"></div>
+              <div>
+                <strong>Genially</strong>
+                <span>Escape rooms e apresentações interativas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="eco-category">
+          <h3 class="eco-cat-title">🤝 Colaboração</h3>
+          <div class="eco-tools">
+            <div class="eco-tool">
+              <div class="eco-dot dot-blue"></div>
+              <div>
+                <strong>Padlet</strong>
+                <span>Mural colaborativo digital</span>
+              </div>
+            </div>
+            <div class="eco-tool">
+              <div class="eco-dot dot-blue"></div>
+              <div>
+                <strong>Mentimeter</strong>
+                <span>Respostas em tempo real com nuuvens</span>
+              </div>
+            </div>
+            <div class="eco-tool">
+              <div class="eco-dot dot-blue"></div>
+              <div>
+                <strong>Jamboard</strong>
+                <span>Quadro colaborativo Google</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="eco-category">
+          <h3 class="eco-cat-title">📊 Avaliação Formativa</h3>
+          <div class="eco-tools">
+            <div class="eco-tool">
+              <div class="eco-dot dot-purple"></div>
+              <div>
+                <strong>Quizizz</strong>
+                <span>Quiz assíncrono com feedback imediato</span>
+              </div>
+            </div>
+            <div class="eco-tool">
+              <div class="eco-dot dot-purple"></div>
+              <div>
+                <strong>Google Forms</strong>
+                <span>Formulários + análise automática</span>
+              </div>
+            </div>
+            <div class="eco-tool">
+              <div class="eco-dot dot-purple"></div>
+              <div>
+                <strong>Socrative</strong>
+                <span>Avaliação em tempo real com dados</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="animate-in delay-4 workflow-arrow">
+        <div class="workflow-step">IA gera conteúdo</div>
+        <div class="arrow-icon">→</div>
+        <div class="workflow-step">BriskTeaching / MagicSchool formata</div>
+        <div class="arrow-icon">→</div>
+        <div class="workflow-step">Plataforma de jogo aplica</div>
+        <div class="arrow-icon">→</div>
+        <div class="workflow-step">Professor avalia & melhora</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 9: CASO PRÁTICO -->
+  <section class="slide" id="slide-9" data-slide="9">
+    <div class="slide-bg bg-green"></div>
+    <div class="slide-content slide9-layout">
+
+      <!-- Header -->
+      <div class="s9-header">
+        <div class="section-tag animate-in delay-1">✅ Caso Prático</div>
+        <h2 class="slide-title animate-in delay-2">Metodologia em Ação — 12.º Ano Profissional</h2>
+        <p class="slide-desc animate-in delay-2">Turma com risco de abandono escolar · Desmotivação · Baixa participação</p>
+      </div>
+
+      <!-- Context chips -->
+      <div class="s9-context animate-in delay-3">
+        <div class="ctx-chip chip-red">😔 Abandono escolar</div>
+        <div class="ctx-chip chip-orange">📵 Desmotivação</div>
+        <div class="ctx-chip chip-yellow">🔇 Baixa participação</div>
+        <div class="ctx-arrow">→</div>
+        <div class="ctx-chip chip-green">🎮 Jogo Pedagógico</div>
+        <div class="ctx-chip chip-blue">🤖 IA + Excel + Google Forms</div>
+      </div>
+
+      <!-- 4 Phases -->
+      <div class="s9-phases animate-in delay-3">
+
+        <div class="s9-phase" onclick="togglePhase(this)">
+          <div class="s9-phase-header">
+            <div class="s9-num n1">1</div>
+            <div class="s9-phase-title">
+              <strong>Guião com IA</strong>
+              <span>Prompt → conteúdo estruturado</span>
+            </div>
+            <span class="s9-toggle">▼</span>
+          </div>
+          <div class="s9-phase-body">
+            <p>Introdução de um <em>prompt</em> num LLM (ChatGPT, Gemini ou Claude) definindo: <strong>conteúdos a abordar</strong>, nível de ensino (12.º Profissional) e grau de aprofundamento. O modelo gera um guião estruturado que serve de base para toda a atividade.</p>
+            <div class="s9-tools"><span>ChatGPT</span><span>Gemini</span><span>Claude</span><span>BriskTeaching</span></div>
+          </div>
+        </div>
+
+        <div class="s9-phase" onclick="togglePhase(this)">
+          <div class="s9-phase-header">
+            <div class="s9-num n2">2</div>
+            <div class="s9-phase-title">
+              <strong>Apresentação & Descoberta Guiada</strong>
+              <span>PowerPoint gerado pela IA ou tutor interativo</span>
+            </div>
+            <span class="s9-toggle">▼</span>
+          </div>
+          <div class="s9-phase-body">
+            <p>Com base no guião, a IA elabora uma <strong>apresentação PowerPoint</strong> dos conteúdos — ou, em alternativa, atua como <em>tutor num mecanismo de descoberta guiada</em>, levando os alunos a construir o conhecimento por perguntas progressivas.</p>
+            <div class="s9-tools"><span>MagicSchool</span><span>ChatGPT</span><span>Gemini</span></div>
+          </div>
+        </div>
+
+        <div class="s9-phase" onclick="togglePhase(this)">
+          <div class="s9-phase-header">
+            <div class="s9-num n3">3</div>
+            <div class="s9-phase-title">
+              <strong>Atividade Lúdica em Grupo</strong>
+              <span>2–3 alunos · colaboração com IA · tempo definido</span>
+            </div>
+            <span class="s9-toggle">▼</span>
+          </div>
+          <div class="s9-phase-body">
+            <p>Em grupos de <strong>2 a 3 alunos</strong>, é introduzido um prompt com as ideias iniciais da atividade, o guião já desenvolvido, o <strong>tempo disponível</strong>, o nível de dificuldade e as <em>características da turma</em> (ex.: pouco interesse, desatenta, agitada). A IA gera uma atividade prática e lúdica personalizada para esse contexto real.</p>
+            <div class="s9-tools"><span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>MagicSchool</span></div>
+          </div>
+        </div>
+
+        <div class="s9-phase" onclick="togglePhase(this)">
+          <div class="s9-phase-header">
+            <div class="s9-num n4">4</div>
+            <div class="s9-phase-title">
+              <strong>Gamificação & Avaliação</strong>
+              <span>Excel · Google Forms · Chatbot</span>
+            </div>
+            <span class="s9-toggle">▼</span>
+          </div>
+          <div class="s9-phase-body">
+            <p>Aperfeiçoamento com instrumentos de <strong>competição e avaliação</strong>: tabela <em>Excel</em> projetada no quadro com pontuações em tempo real, <em>Google Forms</em> com classificação por rapidez e qualidade das respostas, ou interação com um <em>Chatbot</em> integrado no jogo.</p>
+            <div class="s9-tools"><span>Excel</span><span>Google Forms</span><span>Chatbot IA</span><span>BriskTeaching</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="click-hint animate-in delay-5">👆 Clique em cada fase para expandir os detalhes</p>
+    </div>
+  </section>
+
+  <!-- SLIDE 10: CONCLUSÃO & PRÓXIMOS PASSOS -->
+  <section class="slide" id="slide-10" data-slide="10">
+    <div class="slide-bg bg-hero final-bg"></div>
+    <div class="particles" id="particles-10"></div>
+    <div class="slide-content hero-content final-content">
+      <div class="badge animate-in delay-1">🚀 Próximos Passos</div>
+      <h2 class="slide-title animate-in delay-2">Comece Esta Semana</h2>
+      <div class="action-grid animate-in delay-3">
+        <div class="action-card">
+          <div class="action-num">1</div>
+          <h4>Explore as ferramentas</h4>
+          <p>Registe-se gratuitamente no MagicSchool.ai e experimente o "Jogo Generator"</p>
+        </div>
+        <div class="action-card">
+          <div class="action-num">2</div>
+          <h4>Primeiro prompt</h4>
+          <p>Leve um conteúdo de amanhã ao ChatGPT/Gemini e peça um quiz de 5 perguntas</p>
+        </div>
+        <div class="action-card">
+          <div class="action-num">3</div>
+          <h4>Instale o BriskTeaching</h4>
+          <p>Adicione a extensão Chrome e veja o feedback automático funcionar em segundos</p>
+        </div>
+        <div class="action-card">
+          <div class="action-num">4</div>
+          <h4>Partilhe com colegas</h4>
+          <p>A inovação pedagógica cresce quando é partilhada — forme uma comunidade de prática</p>
+        </div>
+      </div>
+      <div class="final-quote animate-in delay-4">
+        <p>"A IA não substitui o professor.<br/><strong>Liberta-o para o que realmente importa: a relação humana com os alunos.</strong>"</p>
+      </div>
+      <div class="resources-bar animate-in delay-5">
+        <span>📌 Recursos:</span>
+        <a href="https://magicschool.ai" target="_blank" class="res-link">magicschool.ai</a>
+        <a href="https://briskteaching.com" target="_blank" class="res-link">briskteaching.com</a>
+        <a href="https://wordwall.net" target="_blank" class="res-link">wordwall.net</a>
+        <a href="https://genially.com" target="_blank" class="res-link">genially.com</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
